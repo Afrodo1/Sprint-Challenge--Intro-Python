@@ -22,9 +22,6 @@ with open('src/cityreader/cities.csv') as csvDataFile:
      cities.append(row)
 cities.remove(cities[0])
 
-for e in cities:
-  print(e)
-
 
 # # print ('Cities: ', cities)
 
@@ -38,7 +35,10 @@ for e in cities:
 
 # Print the list of cities (name, lat, lon), 1 record per line.
 for c in cities:
-    print()
+    name = c[0]
+    lat = c[3]
+    lon = c[4]
+    print(f"The coordinates for {name} are {lat},{lon}")
 
 # # STRETCH GOAL!
 # #
